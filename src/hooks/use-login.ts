@@ -20,8 +20,8 @@ const useLogin = () => {
 
       toast.success(response.meta_data?.message);
       navigate("/dashboard");
-    } catch (err) {
-      toast.error((err as Record<string, unknown>)?.error as string);
+    } catch (err: any) {
+      toast.error(err?.meta_data.message as string);
     }
   };
 

@@ -11,7 +11,7 @@ export const Login = async (
   data: LoginRequest
 ): Promise<BaseResponse<AuthResponse>> => {
   try {
-    const response = await baseInstance.post("/login", data);
+    const response = await baseInstance.post("/api/v1/login", data);
 
     return response.data;
   } catch (err) {
@@ -27,7 +27,7 @@ export const Register = async (
   data: RegisterRequest
 ): Promise<BaseResponse<AuthResponse>> => {
   try {
-    const response = await baseInstance.post("/register", data);
+    const response = await baseInstance.post("/api/v1/register", data);
 
     return response.data;
   } catch (err) {
